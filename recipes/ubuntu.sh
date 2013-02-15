@@ -55,3 +55,10 @@ echo "==> done..."
 echo -e "\n=> Installing git..."
 sudo $pm -y install git-core >> $log_file 2>&1
 echo "==> done..."
+
+# Install java jdk
+echo -e "\n=> Installing Java JDK..."
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo $pm update
+sudo $pm -y install oracle-java7-installer
+echo "==> done..."
